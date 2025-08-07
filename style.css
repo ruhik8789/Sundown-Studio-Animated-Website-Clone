@@ -301,3 +301,14 @@ nav {
     font-size: 3vw;
     position: relative;
 }
+#fixed-image {
+    position: fixed;
+    height: 30vw;
+    width: 23vw;
+    /* background-color: red; */
+    border-radius: 20px;
+    z-index: 10;
+    left: 50%;
+    top: 20%;
+    display: none;
+}
