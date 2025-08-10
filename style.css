@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: "The Sun Medium";
     src: url("https://db.onlinewebfonts.com/t/2fc0cbf60e7b2cb22302e564ab132cc3.eot");
     src: url("https://db.onlinewebfonts.com/t/2fc0cbf60e7b2cb22302e564ab132cc3.eot?#iefix")format("embedded-opentype"),
@@ -6,7 +6,7 @@
         url("https://db.onlinewebfonts.com/t/2fc0cbf60e7b2cb22302e564ab132cc3.woff")format("woff"),
         url("https://db.onlinewebfonts.com/t/2fc0cbf60e7b2cb22302e564ab132cc3.ttf")format("truetype"),
         url("https://db.onlinewebfonts.com/t/2fc0cbf60e7b2cb22302e564ab132cc3.svg#The Sun Medium")format("svg");
-} */
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,6 @@ html, body {
     width: 100%;
 }
 #main {
-    /* background-color: #000; */
     position: relative;
     z-index: 10;
 }
@@ -31,16 +30,20 @@ html, body {
 }
 nav {
     padding: 2vw 0;
-    /* height: 100px; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10000;
 }
-#nav-part2 {
+nav #nav-part2 {
     display: flex;
     align-items: center;
     gap: 1vw;
+}
+nav h3 {
+    display: none;
 }
 #nav-part2 h4 {
     padding: 10px 20px;
@@ -82,7 +85,6 @@ nav {
 #center {
     height: 65vh;
     width: 100%;
-    /* background-color: aqua; */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -104,7 +106,6 @@ nav {
     border-radius: 30px;
     margin-top: 4vw;
     position: relative;
-    /* z-index: 9; */
 }
 #hero-shape {
     position: absolute;
@@ -173,7 +174,6 @@ nav {
 #moving-text h1 {
     font-size: 9vw;
     display: inline-block;
-    /* background-color: lightblue; */
 }
 #gola {
     height: 70px;
@@ -195,7 +195,6 @@ nav {
     height: 80vh;
     width: 100%;
     padding: 4.5vw;
-    /* background-color: aliceblue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -272,7 +271,6 @@ nav {
 #page3 {
     min-height: 100vh;
     width: 100%;
-    /* padding: 4vw 0; */
     background-color: #EFEAE3;
 }
 .elem {
@@ -316,8 +314,6 @@ nav {
     width: 100%;
     background-color: #EFEAE3;
     padding: 8vw 2vw;
-    /* display: flex;
-    align-items: flex-end; */
 }
 #page5 {
     height: 100vh;
@@ -332,7 +328,6 @@ nav {
     background-color: #fe330a;
     color: #fff;
     display: flex;
-    /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
     padding: 1vw 3vw;
@@ -343,7 +338,6 @@ nav {
 #footer-div {
     width: 100%;
     height: 20vh;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -360,36 +354,50 @@ nav {
 
 .swiper {
     width: 100%;
-    height: 70%;
 }
 
 .swiper-slide {
-    text-align: center;
-    /* font-size: 18px; */
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid #000;
-    flex-direction: column;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 75%;
-    /* height: 100%; */
-    object-fit: cover;
-}
-
-.swiper-slide {
+    border-left: 1px solid #707070;
     width: 30%;
-    /* height: 60%; */
+    padding-left: 2vw;
 }
 
-/* .swiper-slide:nth-child(2n) {
-    width: 40%;
-}
+@media (max-width: 600px) {
+    #page1 {
+            min-height: 100vh;
+            width: 100%;
+            padding: 0 4vw;
+        }
+    
+        nav {
+            padding: 4vw 0;
+            width: 100%;
+        }
 
-.swiper-slide:nth-child(3n) {
-    width: 40%;
-} */
+        nav img {
+            height: 8vh;
+        }
+
+        nav #nav-part2 {
+            display: none;
+        }
+
+        nav h3 {
+            display: block;
+            padding: 3vw 5vw;
+            border: 1px solid #ababab;
+            border-radius: 50px;
+            font-size: 4vw;
+            font-weight: 200;
+            padding-left: 10vw;
+        }
+}
+#full-scr {
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -110%;
+    transition: all ease 0.8s;
+}
