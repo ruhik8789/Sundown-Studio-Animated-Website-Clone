@@ -35,7 +35,17 @@ swiperAnimation();
 page4Animation();
 
 var menu = document.querySelector("nav h3");
+var full = document.querySelector("#full-scr");
+var navimg = document.querySelector("nav img");
+var flag = 0;
 menu.addEventListener("click", () => {
-    var menuDiv = document.querySelector("#full-scr");
-    menuDiv.style.top = "0%"
+    if(flag === 0) {
+        full.style.top = 0;
+        navimg.style.opacity = 0;
+        flag = 1;
+    } else {
+        full.style.top = "-110%";
+        navimg.style.opacity = 1;
+        flag = 0;
+    }
 })
